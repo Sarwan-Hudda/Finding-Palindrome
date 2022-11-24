@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text" name="" id="">
+        <button>Check Palindrome</button>
+        
+    </div>
+    <script>
+        let inp = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let paragraph;
+        btn.onclick = ()=>{
+            if(inp.value === inp.value.split('').reverse().join('')){
+                paragraph = document.createElement('p');
+                document.querySelector('.wrapper').appendChild(paragraph);
+                paragraph.innerHTML  = 'Number Is Palindrome'
+            }
+            else{
+                document.querySelector('.wrapper').appendChild(paragraph);
+                paragraph.innerHTML  = 'Number Is Not Palindrome'
+            }
+        }
+    </script>
+</body>
+</html>
