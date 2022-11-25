@@ -16,14 +16,16 @@
         let inp = document.querySelector('input')
         let btn = document.querySelector('button')
         let paragraph;
+        paragraph = document.createElement('p');
         btn.onclick = ()=>{
-            if(inp.value === inp.value.split('').reverse().join('')){
-                paragraph = document.createElement('p');
+            
                 document.querySelector('.wrapper').appendChild(paragraph);
+            if(inp.value === inp.value.split('').reverse().join('')){
+      
                 paragraph.innerHTML  = 'Number Is Palindrome'
             }
             else{
-                document.querySelector('.wrapper').appendChild(paragraph);
+        
                 paragraph.innerHTML  = 'Number Is Not Palindrome'
             }
         }
